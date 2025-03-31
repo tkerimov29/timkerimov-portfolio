@@ -16,16 +16,16 @@ h2 {
     padding: 0 20px;
 }
 
+/* Ensure the whole project section (text + image) triggers the hover effect */
 .projects {
+    position: relative;
     border: 1px solid black;
     padding: 10px;
-    aspect-ratio: 1/1; /* Ensures square grid items */
+    aspect-ratio: 1/1;
     overflow: hidden;
-    position: relative; /* Necessary for absolute positioning */
 }
 
-/* Overlay text within project items: centered, positioned in the middle, 
-   initially invisible, and with a fade-in transition */
+/* Ensure text does not interfere with hover detection */
 .project-text {
     position: absolute;
     text-align: center;
@@ -33,11 +33,11 @@ h2 {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2em;
-    margin: 0; /* Remove any default margin */
-    color: white; /* Adjust the text color to ensure visibility */
-    z-index: 2; /* Ensure the text is above the image */
-    opacity: 0; /* Start fully visible */
-    transition: opacity 0.5s ease; /* Fade transition */
+    color: white;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none; /* Allows the hover to work through text */
 }
 
 /* Project images: fill the container, cover aspect ratio, smooth scale 
@@ -51,16 +51,16 @@ h2 {
     z-index: 1; /* Ensure the image is below the text */
 }
 
-/* On hover of the project item, fade in the overlay text */
+/* Set the project text to be fully visible on hover */
 .projects:hover .project-text {
-    opacity: 1; /* Fade in the text on hover */
+    opacity: 1; /* Ensure text remains visible */
+    pointer-events: none; /* Allow the hover effect to remain even when hovering text */
 }
 
-/* On hover of the project image, apply a blur effect and slight scale-up */
-.projects img:hover {
-    filter: blur(5px); /* Apply a blur effect */
-    transform: scale(1.1); /* Slightly enlarge the image */
-    filter: brightness(50%);
+/* Apply the image hover effect when hovering over the entire project section */
+.projects:hover img {
+    filter: blur(5px) brightness(50%);
+    transform: scale(1.1);
 }
 
 /* Responsive design for screens up to 425px wide: adjust grid column 
