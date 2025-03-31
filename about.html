@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <link rel="stylesheet" href="stylesheet/about.css">
+
+    <link rel="icon" href="images/default profile picture.jpg">
+
+    <title>Tim Kerimov | About</title>
+</head>
+<style>
+    @font-face {
+        font-family: "customFont";
+        src: url("sp-butch-lite-font/SpButchLiteMedium-rv229.otf");
+    }
+
+    body {
+        font-family: "customFont";
+    }
+</style>
+<body class="light-theme">
+    <!-- This is the header, which contains a navbar that navigates everything inbetween pages.
+    It also changes to a pop-up interactive navbar when browser resizes -->
+    <header>
+        <a class="name" href="index.html">Tim Kerimov</a>
+        <div class="container">
+            <!-- The hamburger does not appear unless the browser resizes smaller,
+            replacing the navbar -->
+            <div class="hamburger" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <!-- The navbar stays appeared unless the browser resizes smaller,
+            being replaced by hamburger -->
+            <ul class="navbar" id="navbar">
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li class="contact-tab"><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="contact-button"><a href="contact.html">Contact me</a></button>
+            <div class="background-button">
+                <input type="checkbox" id="check">
+                <label for="check" class="button"></label>
+            </div>
+        </div>
+    </header>
+
+    <!-- The section divider is here for aesthetic reasons -->
+    <div class="section-divider"></div>
+
+    <h2>Who am I?</h2>
+
+    <section class="about-1">
+        <img src="images/man wearing glasses.jpeg" alt="default picture">
+        <p>
+            I'm Tim Kerimov, a software developer based in Canada with a passion for creating web applications, building games, and developing mobile apps. With a deep love for coding and problem-solving, I strive to craft digital experiences that are not only functional but also enjoyable.
+        </p>
+    </section>        
+    <section class="section-divider"></section>
+    <section class="about-2">
+        <img src="images/software developer.jpeg" alt="default picture">
+        <p>
+            My expertise lies in full-stack web development, where I utilize tools like React, HTML/CSS, JavaScript, and Python. I'm also proficient in game development using Unity and Unreal.
+        </p>
+    </section>
+    <section class="section-divider"></section>
+    <section class="about-3">
+        <img src="images/software developer group project.jpg" alt="default picture">
+        <p>
+            Over the past few years, I've had the pleasure of working on diverse projects, from developing responsive websites to designing immersive game environments. My work has been recognized with [specific achievement], and I continuously strive to push the boundaries of my craft.
+        </p>
+    </section>
+    <section class="section-divider"></section>
+
+    <!-- The cursor follows the mouse, resizes, and color contrasts -->
+    <section class="cursor"></section>
+
+    <!-- The script.js file plays a major role in the browser's aesthetic and functionality -->    
+    <script src="script.js"></script>
+
+    <footer>
+        <ul class="footer-navbar" id="footer-navbar" style="padding-left: 0">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li class="contact-tab"><a href="contact.html">Contact</a></li>
+            <li class="report-tab"><a href="report.html">Report</a></li>
+        </ul>
+    </footer>       
+</body>
+</html>

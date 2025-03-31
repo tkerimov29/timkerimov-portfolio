@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+    <link rel="stylesheet" href="stylesheet/services.css">
+
+    <link rel="icon" href="images/default profile picture.jpg">
+
+    <title>Tim Kerimov | Services</title>
+</head>
+<style>
+    @font-face {
+        font-family: "customFont";
+        src: url("sp-butch-lite-font/SpButchLiteMedium-rv229.otf");
+    }
+
+    body {
+        font-family: "customFont";
+    }
+</style>
+<body class="light-theme">
+    <header>
+        <a class="name" href="index.html">Tim Kerimov</a>
+        <div class="container">
+            <!-- Hamburger icon for responsive navbar -->
+            <div class="hamburger" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <!-- Main navigation menu -->
+            <ul class="navbar" id="navbar">
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li class="contact-tab"><a href="contact.html">Contact</a></li>
+            </ul>
+            <!-- Contact button linked to the contact page -->
+            <button class="contact-button"><a href="contact.html">Contact me</a></button>
+            <!-- Toggle button for theme switching -->
+            <div class="background-button">
+                <input type="checkbox" id="check">
+                <label for="check" class="button"></label>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section divider for visual separation -->
+    <div class="section-divider"></div>
+
+    <!-- Main content section for services offered -->
+    <h2>What I Offer</h2>
+
+    <p>
+        I specialize in bringing ideas to life through innovative web development or game design. Whether you need a custom website, an engaging game, I have the skills and experience to deliver high-quality solutions tailored to your needs.
+    </p>
+
+    <!-- Service grid displaying different services with descriptions -->
+    <div class="service-grid">
+        <div class="row">
+            <!-- Web Application Service -->
+            <a href="contact.html" id="web-app">
+                <section class="service">
+                    <div class="service-details">
+                        <h5>Web application</h5>
+                        <h3>$600</h3>
+                        <ul>
+                            <li>Unique, modern, customized design</li>
+                            <li>Responsive, accessible development</li>
+                            <li>Optimized performance</li>
+                            <li>Adaptable, scalable backend solution</li>
+                            <li>Multi-platform support | charge extra</li>
+                        </ul>
+                    </div>
+                    <div class="service-icons">
+                        <!-- HTML5 Icon -->
+                        <i class="fab fa-html5"></i>
+                    </div>
+                </section>
+            </a>
+            <!-- Website Service -->
+            <a href="contact.html" id="website">
+                <section class="service">
+                    <div class="service-details">
+                        <h5>Website</h5>
+                        <h3>$900</h3>
+                        <ul>
+                            <li>Unique, modern, customized design</li>
+                            <li>Responsive, accessible development</li>
+                            <li>Optimized performance</li>
+                            <li>Adaptable, scalable backend solution</li>
+                            <li>SEO and page speed optimization</li>
+                            <li>Hosting (including domain) setup | charge extra</li>
+                            <li>Multilingual support | charge extra </li>
+                        </ul>
+                    </div>
+                    <div class="service-icons">
+                        <!-- CSS3 Icon -->
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                </section>
+            </a>
+        </div>
+        <div class="row">
+            <!-- Game Development Service -->
+            <a href="contact.html" id="game-dev">
+                <section class="service">
+                    <div class="service-details">
+                        <h5>Game development</h5>
+                        <h3>$1200</h3>
+                        <ul>
+                            <li>Game design</li>
+                            <li>2D/3D art and animation</li>
+                            <li>Cross-platform integration</li>
+                            <li>Gameplay and user experience (UX)</li>
+                            <li>Performance optimization</li>
+                            <li>Multiplayer and Networking</li>
+                        </ul>
+                    </div>
+                    <div class="service-icons">
+                        <!-- Unity Icon -->
+                        <i class="fab fa-unity"></i>
+                    </div>
+                </section>
+            </a>
+            <!-- Custom Problem Service -->
+            <a href="contact.html" id="mobile-app">
+                <section class="service">
+                    <div class="service-details">
+                        <h5>Custom problem</h5>
+                        <h3>Individual price</h3>
+                        <p>
+                            Got a problem that doesn't fit in what I offer?
+                            No worries - I'm your problem solver. Let's get in touch and
+                            work out a personalized solution.
+                        </p>
+                    </div>
+                    <div class="service-icons">
+                        <!-- Question Mark Icon -->
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                </section>
+            </a>
+        </div>
+    </div>
+
+    <!-- Section divider for visual separation -->
+    <div class="section-divider"></div>
+
+    <!-- The cursor follows the mouse, resizes, and color contrasts -->
+    <div class="cursor"></div>
+
+    <!-- The script.js file plays a major role in the browser's aesthetic and functionality -->
+    <script src="script.js"></script>
+
+    <!-- Footer section with navigation links -->
+    <footer>
+        <ul class="footer-navbar" id="footer-navbar" style="padding-left: 0">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li class="contact-tab"><a href="contact.html">Contact</a></li>
+            <li class="report-tab"><a href="report.html">Report</a></li>
+        </ul>
+    </footer>       
+</body>
+</html>

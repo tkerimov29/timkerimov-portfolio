@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+    <link rel="stylesheet" href="stylesheet/index.css">
+
+    <link rel="icon" href="images/default profile picture.jpg">
+
+    <title>Tim Kerimov | Personal Portfolio</title>
+</head>
+<style>
+    @font-face {
+        font-family: "customFont";
+        src: url("sp-butch-lite-font/SpButchLiteMedium-rv229.otf");
+    }
+
+    body {
+        font-family: "customFont";
+    }
+</style>
+<body class="light-theme">
+    <!-- This is the header, which contains a navbar that navigates everything inbetween pages.
+    It also changes to a pop-up interactive navbar when browser resizes -->
+    <header>
+        <a class="name" href="report.html">Tim Kerimov</a>
+        <div class="container">
+            <div class="hamburger" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="navbar" id="navbar">
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li class="contact-tab"><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="contact-button"><a href="contact.html">Contact me</a></button>
+            <div class="background-button">
+                <input type="checkbox" id="check">
+                <label for="check" class="button"></label>
+            </div>
+        </div>
+    </header>
+
+    <div class="section-divider"></div> <!-- Add this divider below sections -->
+
+    <section id="intro">
+        <h1>Tim Kerimov <br> Software Developer</h1>
+        <!-- Buttons with icons -->
+        <button><a href="projects.html"><i class="fas fa-briefcase"></i> See my past experiences</a></button>
+        <button><a href="services.html"><i class="fas fa-cogs"></i> See services</a></button>
+    </section>
+    
+    <div class="section-divider"></div> <!-- Add another divider -->
+
+    <!-- The cursor follows the mouse, resizes, and color contrasts -->
+    <div class="cursor"></div>
+
+    <!-- The script.js file plays a major role in the browser's aesthetic and functionality -->
+    <script src="script.js"></script>
+
+    <footer>
+        <ul class="footer-navbar" id="footer-navbar" style="padding-left: 0">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li class="contact-tab"><a href="contact.html">Contact</a></li>
+            <li class="report-tab"><a href="report.html">Report</a></li>
+        </ul>
+    </footer>    
+</body>
+</html>

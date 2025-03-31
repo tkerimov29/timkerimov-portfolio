@@ -1,0 +1,112 @@
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 1.5em 0;
+    grid-column: 3 / 11;
+}
+
+/* Styles for about sections: flexbox layout for alignment, 
+spans columns 10 to 12. Uses a large font size and wraps content if needed */
+.about-1, .about-2, .about-3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: span 10 / 12;
+    font-size: 1.5em;
+    /* border: 1px solid black; */
+    padding: 1em;
+    flex-wrap: wrap;
+    font-size: 2em;
+}
+
+.about-1 img, .about-2 img, .about-3 img {
+    width: 40%;
+    margin: 1em;
+}
+
+/* Aligns text to the right and arranges content in a row 
+   for .about-1 and .about-3 sections */
+.about-1, .about-3 {
+    text-align: right;
+    flex-direction: row;
+}
+
+/* Aligns text to the left and arranges content in a row-reverse 
+   for the .about-2 section */
+.about-2 {
+    text-align: left;
+    flex-direction: row-reverse;
+}
+
+.about-1 p, .about-2 p, .about-3 p {
+    max-width: 40%;
+    margin: 1em;
+}
+
+/* Responsive design for screens up to 1220px wide: 
+   reduces font size in about sections */
+@media (max-width: 1220px) {
+    .about-1, .about-2, .about-3 {
+        font-size: 1.5em;
+    }
+}
+
+/* Responsive design for screens up to 768px wide */
+@media (max-width: 768px) {
+    /* Reduces font size of h2 elements */
+    h2 {
+        font-size: 2em;
+    }
+
+    /* Stacks content vertically, centers text and images 
+       for about sections */
+    .about-1, .about-2, .about-3 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Increases image width to 70% within about sections */
+    .about-1 img, .about-2 img, .about-3 img {
+        width: 70%;
+    }
+
+    /* Expands paragraph width to 100%, with reduced vertical margins 
+       within about sections */
+    .about-1 p, .about-2 p, .about-3 p {
+        max-width: 100%;
+        margin: 0.5em 0;
+    }
+
+    /* Ensures text alignment consistency for smaller screens */
+    .about-1, .about-3 {
+        text-align: right;
+    }
+
+    .about-2 {
+        text-align: left;
+    }
+}
+
+/* Responsive design for screens up to 480px wide */
+@media (max-width: 480px) {
+    /* Further reduces font size of h2 elements */
+    h2 {
+        font-size: 1.8em;
+    }
+
+    /* Reduces font size within about sections */
+    .about-1, .about-2, .about-3 {
+        grid-column: span 11;
+        font-size: 1.2em;
+    }
+
+    /* Expands images to full width within about sections */
+    .about-1 img, .about-2 img, .about-3 img {
+        width: 100%;
+    }
+
+    /* Further reduces font size of paragraphs within about sections */
+    .about-1 p, .about-2 p, .about-3 p {
+        font-size: 1em;
+    }
+}
