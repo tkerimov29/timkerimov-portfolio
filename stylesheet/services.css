@@ -82,7 +82,7 @@ body.dark-theme .service {
 
 #website {
     transition: all 0.2s ease;
-    grid-column: span 8; /* Spans 8 out of 12 columns */
+    grid-column: span 4; /* Spans 8 out of 12 columns */
 }
 
 #website:hover {
@@ -91,24 +91,23 @@ body.dark-theme .service {
 
 #game-dev {
     transition: all 0.2s ease;
-    grid-column: span 7; /* Spans 7 out of 12 columns */
+    grid-column: span 7; 
 }
 
 #game-dev:hover {
     background-color: rgb(9, 244, 12);
 }
 
-#mobile-app {
+#custom-problem {
     transition: all 0.2s ease;
-    grid-column: span 5; /* Spans 5 out of 12 columns */
+    grid-column: span 4; 
 }
 
-#mobile-app:hover {
+#custom-problem:hover {
     background-color: rgb(247, 0, 255);
 }
 
-/* Responsive design for screens up to 1915px wide: adjusts max-width 
-   for service details and reduces icon size */
+
 @media (max-width: 1915px) {
     .service-details {
         max-width: 70%;
@@ -124,18 +123,6 @@ body.dark-theme .service {
 @media (max-width: 1700px) {
     .service {
         font-size: 1.3em;
-    }
-
-    #web-app {
-        grid-column: span 5; /* Spans 5 out of 12 columns */
-    }
-    
-    #website {
-        grid-column: span 7; /* Spans 7 out of 12 columns */
-    }
-    
-    #game-dev {
-        grid-column: span 7; /* Spans 7 out of 12 columns */
     }
 }
 
@@ -162,7 +149,7 @@ body.dark-theme .service {
         grid-column: span 12; /* Spans full width */
     }
     
-    #mobile-app {
+    #custom-problem {
         grid-column: span 12; /* Spans full width */
     }
 }
