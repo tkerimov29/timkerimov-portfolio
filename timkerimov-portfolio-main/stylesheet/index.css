@@ -1,0 +1,80 @@
+#intro {
+    text-align: center;
+    grid-column: span 10 / 12;
+    margin-top: 300px;
+    margin-bottom: 300px;
+    z-index: 1;
+}
+
+#intro h1 {
+    font-size: 5em;
+    margin: 30px;
+}
+
+#intro button {
+    font-size: 1.3em;
+    margin: 30px;
+    padding: 10px;
+    cursor: pointer;
+    background: none;
+    border-radius: 10px;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 0px 5px black;
+}
+
+#intro button a {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+button a i {
+    margin-right: 10px; /* Spacing between icon and text */
+}
+
+/* Scales up the cursor when hovering over the button 
+   within the intro section */
+#intro button:hover ~ .cursor {
+    transform: scale(5);
+}
+
+/* When the dark theme is enabled, changes the button text color 
+   to white, adjusts the border to white, 
+   and modifies the box-shadow to use white instead of black */
+body.dark-theme #intro button {
+    color: white;
+    border: 1px solid white;
+    box-shadow: 0px 5px white;
+}
+
+/* Media query for screens with a maximum width of 425px: 
+   adjusts the intro section's top margin, 
+   makes it span all 12 columns, and reduces the font size */
+@media (max-width: 425px) {
+    #intro {
+        margin-top: 200px;
+        grid-column: span 12;
+        font-size: 0.7em;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+}
+
+/* Media query for screens with a maximum width of 375px: 
+   further reduces the top margin and font size of the intro section, 
+   and increases the font size of the button */
+@media (max-width: 375px) {
+    #intro {
+        margin-top: 200px;
+        grid-column: span 12;
+        font-size: 0.5em;
+    }
+
+    #intro button {
+        font-size: 2em;
+    }
+}

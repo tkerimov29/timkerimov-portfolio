@@ -1,0 +1,103 @@
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 1.5em 0;
+    grid-column: 3 / 11;
+}
+
+/* Styles for about sections: flexbox layout for alignment, 
+spans columns 10 to 12. Uses a large font size and wraps content if needed */
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: span 10 / 12;
+    font-size: 1.5em;
+    line-height: 30px;
+}
+
+.about img {
+    min-width: 300px;
+    margin: 1em;
+    transition: all 0.5s ease;
+}
+
+.about img:hover {
+    box-shadow: 10px 10px 10px black;
+}
+
+/* Aligns text to the right and arranges content in a row 
+   for .about and .about-3 sections */
+.about{
+    text-align: right;
+    flex-direction: row;
+}
+
+.about p{
+    max-width: 40%;
+    margin: 1em;
+}
+
+/* Responsive design for screens up to 1220px wide: 
+   reduces font size in about sections */
+@media (max-width: 1220px) {
+    .about{
+        font-size: 1.5em;
+    }
+}
+
+/* Responsive design for screens up to 768px wide */
+@media (max-width: 768px) {
+    /* Reduces font size of h2 elements */
+    h2 {
+        font-size: 2em;
+    }
+
+    /* Stacks content vertically, centers text and images 
+       for about sections */
+    .about{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Increases image width to 70% within about sections */
+    .about img{
+        width: 70%;
+    }
+
+    /* Expands paragraph width to 100%, with reduced vertical margins 
+       within about sections */
+    .about p{
+        max-width: 100%;
+        margin: 0.5em 0;
+    }
+
+    /* Ensures text alignment consistency for smaller screens */
+    .about{
+        text-align: right;
+    }
+}
+
+/* Responsive design for screens up to 480px wide */
+@media (max-width: 480px) {
+    /* Further reduces font size of h2 elements */
+    h2 {
+        font-size: 1.8em;
+    }
+
+    /* Reduces font size within about sections */
+    .about{
+        grid-column: span 11;
+        font-size: 1.2em;
+    }
+
+    /* Expands images to full width within about sections */
+    .about img{
+        width: 100%;
+    }
+
+    /* Further reduces font size of paragraphs within about sections */
+    .about p{
+        font-size: 1em;
+    }
+}

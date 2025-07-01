@@ -1,0 +1,352 @@
+/* This CSS file is shared upon all HTML files, as it styles the header,
+the background, cursor, and footer. */
+
+/* Basic Reset */
+   * {
+    margin: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Defines a grid layout for the body, with 12 equal columns. 
+   Sets background color to white and text color to black, 
+   and applies a serif font */
+body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: white;
+    color: black;
+    font-family: serif;
+}
+
+/* For the dark theme, sets the background color to black 
+   and text color to white, while maintaining the grid layout */
+body.dark-theme {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: black;
+    color: white;
+}
+
+/* Full-width section divider with a black line, 
+   centered horizontally, with a margin of 40px above and below */
+.section-divider {
+    grid-column: span 12;
+    width: 80%;
+    height: 2px;
+    background-color: black;
+    margin: 40px auto;
+}
+
+/* Changes the section divider color to white in the dark theme */
+body.dark-theme .section-divider {
+    background-color: white;
+}
+
+/* Cursor customization: fixed position, small circle with white background, 
+   centered at the cursor location, using mix-blend-mode for visual effect */
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index: 1000;
+    transition: 0.1s;
+}
+
+/* Enlarges the cursor when an element with the .hovered class is interacted with */
+.cursor.hovered {
+    width: 100px;
+    height: 100px;
+}
+
+/* Hamburger menu setup: hidden by default, displayed as a column when active, 
+   and positioned relative to the header */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute; /* Position it absolutely within the header */
+    right: 20px; /* Keep it aligned with the right side */
+    top: 50%; /* Center it vertically within the header */
+    transform: translateY(-50%); /* Correct vertical centering */
+}
+
+/* Styles for each line within the hamburger menu: small black bars with spacing */
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px;
+}
+
+/* Changes hamburger lines to white in the dark theme */
+body.dark-theme .hamburger .line {
+    background-color: white;
+}
+
+/* Header and links are styled with black text and no underline */
+header, a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Header setup: flexbox layout, spans columns 3 to 11, 
+   vertically centers content, and positions elements */
+header {
+    display: flex;
+    font-size: 1.5em;
+    grid-column: 3 / 11;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    position: relative; /* Make header the reference point */
+}
+
+/* Footer setup: similar to the header, but content is centered horizontally */
+footer {
+    display: flex;
+    font-size: 1.5em;
+    grid-column: 3 / 11;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: white;
+    position: relative; /* Make header the reference point */
+}
+
+/* In the dark theme, footer text and background colors are inverted */
+body.dark-theme footer {
+    color: white;
+    background-color: black;
+}
+
+/* In the dark theme, header and links are given a black background and white text */
+body.dark-theme header, body.dark-theme a {
+    background-color: black;
+    color: white;
+}
+
+/* Hides the contact tab within the navbar */
+header .navbar .contact-tab {
+    display: none;
+}
+
+/* Styles the contact button: transparent background, rounded corners, 
+   black border and text, with a 3D effect using a shadow */
+.contact-button {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    background: none;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 5px black;
+}
+
+/* Changes the contact button's color and border to white in the dark theme */
+body.dark-theme .contact-button {
+    color: white;
+    border: 1px solid white;
+    box-shadow: 0px 5px white;
+}
+
+/* Flexbox container for aligning items in the header */
+.container {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles navbar list items: inline-block display with padding */
+.navbar li {
+    display: inline-block;
+    padding: 20px;
+}
+
+/* Adds margin around buttons and background buttons in the header */
+.container button, .background-button {
+    margin: 0 20px;
+}
+
+/* Styles the list items within the header, making them flex containers */
+header ul li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Styles a button with a rounded background, flexible alignment, and transition effect */
+.button {
+    display: flex;
+    background-color: #d2d2d2;
+    width: 70px;
+    height: 30px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+}
+
+/* Inner circle of the button, positioned absolutely within the button, 
+   with a transition for smooth movement */
+.button::before {
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 200px;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+/* Changes button background to blue and shifts the inner circle to the right when checked */
+input:checked + .button {
+    background-color: blue;
+}
+
+input:checked + .button::before {
+    transform: translateX(40px);
+}
+
+/* Flexbox container for aligning items in the background button */
+.background-button {
+    display: flex;
+    align-items: center;
+}
+
+/* Hides the checkbox input element */
+#check {
+    display: none;
+}
+
+/* Footer navbar: flexbox layout spanning columns 2 to 11, centered horizontally */
+.footer-navbar {
+    display: flex;
+    grid-column: 2/11;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+/* Styles the list items within the footer navbar: inline-block display with padding */
+.footer-navbar li {
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+/* Footer navbar links inherit color and have no underline */
+.footer-navbar a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Responsive design for screens up to 1270px wide */
+@media (max-width: 1270px) {
+    /* Displays the hamburger menu on smaller screens */
+    .hamburger {
+        display: flex;
+    }
+
+    .contact-button, .background-button {
+        display: none;
+    }
+
+    /* Hides the main navbar and repositions it below the hamburger, 
+       with a drop-down effect and box-shadow for depth */
+    header .navbar {
+        display: none;
+        position: absolute;
+        right: 20px; /* Align with the hamburger's right */
+        top: 50px; /* Positions the navbar just below the hamburger */
+        background-color: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        border-radius: 5px;
+        padding: 10px;
+        z-index: 900; /* Keeps the navbar above other elements */
+    }
+
+    /* In dark mode, the navbar background changes to black */
+    body.dark-theme .navbar {
+        background-color: black;
+    }
+
+    /* When the navbar is active, it becomes visible and aligns text to the right */
+    .navbar.active {
+        display: block;
+        text-align: right;
+    }
+
+    /* List items in the active navbar are displayed as blocks with padding */
+    .navbar.active li {
+        display: block;
+        padding: 15px 10px;
+    }
+
+    /* Links within the active navbar are displayed as blocks with full width */
+    .navbar.active a {
+        display: block;
+        width: 100%;
+    }
+
+    /* Re-adjusts the list items within the navbar to display as flex containers */
+    .navbar li {
+        display: flex;
+    }
+
+    /* Hides the navbar by default, and positions it just below the hamburger */
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: calc(100% + 10px); /* Positions the navbar 10px below the hamburger */
+        right: 0;
+    }
+
+    /* Hides the navbar list items by default */
+    .navbar li {
+        display: none;
+    }
+
+    /* Displays the navbar list items with padding when active */
+    .navbar.active li {
+        display: block;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        grid-column: span 10 / 12;
+    }
+}
+
+@media (max-width: 600px) {
+    footer {
+        margin: 0 auto;
+        width: 27%;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 425px) {
+    header {
+        grid-column: span 12;
+        margin-top: 30px;
+    }
+
+    header .name {
+        display: none;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
